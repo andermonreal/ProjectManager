@@ -78,8 +78,6 @@ if (!empty($usernameInput) && !empty($passwordInput)) {
     <footer>
         <p>&copy; 2024 Project Manager. All rights reserved.</p>
     </footer>
-
-    <script src="js/login.js"></script>
 </body>
 
 </html>

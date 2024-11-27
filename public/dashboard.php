@@ -22,7 +22,7 @@ if (!isset($_SESSION["role"])) {
         <nav>
             <a href="index.php">Home</a>
             <a href="about_us.php">About Us</a>
-            <a href="index.php" id="logoutBtn">Logout</a>
+            <a href="logout.php" id="logoutBtn">Logout</a>
         </nav>
     </header>
 

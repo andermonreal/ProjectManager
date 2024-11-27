@@ -26,10 +26,12 @@ if (!empty($usernameInput) && !empty($passwordInput)) {
         $_SESSION['username'] = $usernameInput;
         $_SESSION['role'] = 'admin';
         header('Location: admin.php');
+        exit();
     } elseif (procesarLogin($usernameInput, $passwordInput, $users)) {
         $_SESSION['username'] = $usernameInput;
         $_SESSION['role'] = 'user';
         header('Location: dashboard.php');
+        exit();
     } else {
         echo "Username or passord incorrect";
     }

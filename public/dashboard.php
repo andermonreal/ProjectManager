@@ -1,3 +1,10 @@
+<?php
+if (!isset($_SESSION["role"])) {
+    header('Location: login.php');
+    exit();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,9 +20,9 @@
     <header>
         <h1>Welcome, <span id="username">User</span>!</h1>
         <nav>
-            <a href="index.html">Home</a>
-            <a href="about_us.html">About Us</a>
-            <a href="index.html" id="logoutBtn">Logout</a>
+            <a href="index.php">Home</a>
+            <a href="about_us.php">About Us</a>
+            <a href="index.php" id="logoutBtn">Logout</a>
         </nav>
     </header>
 

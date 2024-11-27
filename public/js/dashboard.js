@@ -13,6 +13,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     document.getElementById("logoutBtn").addEventListener("click", () => {
         sessionStorage.removeItem("loggedInUser"); // Cambiar de localStorage a sessionStorage
-        window.location.href = 'login.html'; // Redirigir a la página de inicio de sesión
+        window.location.href = 'login.php'; // Redirigir a la página de inicio de sesión
     });
 });

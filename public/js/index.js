@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
         `;
     };
 
-    document.querySelector('section').appendChild(testimonialContainer);
+    document.querySelector('main').appendChild(testimonialContainer);
     showRandomTestimonial();
 
     // Change testimonial every 5 seconds

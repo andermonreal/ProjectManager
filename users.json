@@ -1,0 +1,52 @@
+[
+    {
+      "username": "jdoe",
+      "password": "6e2b08c694c88570d3d54f6217ecbf74717c7ae7b7622e63c3f47c3668ab690f2b20b78b7da5dbe1645e24cd18a8464000ef569c3ac7642df73b17c7fdadf146",
+      "email": "jdoe@example.com",
+      "phone": "555-123-4567",
+      "address": "123 Elm Street, Springfield"
+    },
+    {
+      "username": "asmith",
+      "password": "70a82b6933894f77925ae4c2921ad4267c8c836ea345e1eb299c7161c0b74a1b1edc2f45a8ff2a9720a06c59395b3e44c0c0e4399b4446e4185f0c4e0e9bc3d3",
+      "email": "asmith@example.com",
+      "phone": "555-987-6543",
+      "address": "456 Oak Avenue, Metropolis"
+    },
+    {
+      "username": "bwilliams",
+      "password": "2c0a6f321d29c94c8e72ec7bcd1c8e071098f79cb26df33efcb1794786e27469cc949c5c96d333fc73aa259ffed3942c44b9e4d00d98613f3d715f3a0d133b0e",
+      "email": "bwilliams@example.com",
+      "phone": "555-333-2222",
+      "address": "789 Pine Road, Gotham"
+    },
+    {
+      "username": "cjones",
+      "password": "981f8db671267329e17f173f5b5b98767dcb5d12555dd232e9f6e23074fdce5a5f3e8d800b2048c7b816729515cf11a881cb6fa8e83b593758b74f3e31cc4728",
+      "email": "cjones@example.com",
+      "phone": "555-444-1111",
+      "address": "321 Maple Drive, Star City"
+    },
+    {
+      "username": "dlbrown",
+      "password": "7fd7250bc90cd77c0161d3701e5441c3c15d26cbb72c65cf33f4e7b0d80a5803bb179d4c0b3e110d0e8f3217be9dce8cf5d3e57cf7cbb715bf3fc07329f345f6",
+      "email": "dlbrown@example.com",
+      "phone": "555-555-5555",
+      "address": "135 Cypress Street, Central City"
+    },
+    {
+      "username": "emartin",
+      "password": "5b31b5a8b7d7047a5b8ff7a9e7ab6b771ce245bf20d7c7bce62157379c9d05b0379c42563a5d109f2735f44710c37b1620f66312a276ce61b979fa18d13c7916",
+      "email": "emartin@example.com",
+      "phone": "555-666-7777",
+      "address": "678 Birch Lane, Coast City"
+    },
+    {
+      "username": "fgarcia",
+      "password": "0c6f8bc67125b22e98642396d3654cb81b5e79d92f3a9c96f3b9c421568cd36b7b0723f5e728463728b9c763a87c1f7f75c9e58cb7f9c3a2c5e79d1a287631e7",
+      "email": "fgarcia@example.com",
+      "phone": "555-888-9999",
+      "address": "901 Spruce Court, Starling City"
+    }
+  ]
+  

@@ -1,4 +1,4 @@
-section {
+main {
     margin: 20px auto;
     padding: 40px;
     max-width: 900px;
@@ -88,14 +88,4 @@ button {
 
 button:hover {
     background-color: #0056b3;
-}
-
-footer {
-    margin-top: 40px;
-    padding: 15px 0;
-    text-align: center;
-    background-color: #333;
-    color: #fff;
-    font-size: 0.9rem;
-    border-radius: 5px;
 }

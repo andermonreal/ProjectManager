@@ -252,7 +252,7 @@ foreach ($data as $user) {
 
                 $data[] = $newUser;
 
-                if (file_put_contents($userFile, json_encode($data, JSON_PRETTY_PRINT))) {
+                if (file_put_contents($userFile, json_encode($newUser, JSON_PRETTY_PRINT))) {
                     echo "<p>User added successfully!</p>";
                     $logMessage = "New user added: $username, email: $email, phone: $phone, address: $address";
 

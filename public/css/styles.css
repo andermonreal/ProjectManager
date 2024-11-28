@@ -38,6 +38,12 @@ header nav a {
     transition: background 0.3s, color 0.3s;
 }
 
+header nav a.active {
+    background-color: #007bff;
+    color: orange;
+    border-radius: 4px;
+}
+
 header nav a:hover {
     background: rgba(255, 255, 255, 0.2);
     color: #ffffff;

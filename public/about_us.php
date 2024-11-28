@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,8 +17,19 @@
         <h1>About Us</h1>
         <nav>
             <a href="index.php">Home</a>
-            <a href="about_us.php">About Us</a>
-            <a href="login.php">Login</a>
+            <a href="about_us.php"
+                class="<?php echo basename($_SERVER['PHP_SELF']) == 'about_us.php' ? 'active' : ''; ?>">About Us</a>
+            <?php
+            if (isset($_SESSION['role'])) {
+                if ($_SESSION['role'] === 'admin') {
+                    echo '<a href="admin.php">Admin Panel</a>';
+                }
+                echo '<a href="dashboard.php">Dashboard</a>';
+                echo '<a href="logout.php">Logout</a>';
+            } else {
+                echo '<a href="login.php">Login</a>';
+            }
+            ?>
         </nav>
     </header>
 

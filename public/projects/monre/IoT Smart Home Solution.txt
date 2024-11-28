@@ -1,0 +1,14 @@
+Project: IoT Smart Home Solution
+Deadline: 2025-02-20
+Status: Pending
+Team Members:
+- Jack
+- Mia
+- Elijah
+
+Summary:
+This project is focused on the development of a smart home system, integrating IoT devices for automation and security. The goal is to offer a seamless experience where users can control lights, temperature, security cameras, and more from their smartphones.
+
+Next Steps:
+- Research compatibility with different smart devices
+- Begin the prototype phase for smart thermostat and lighting systems

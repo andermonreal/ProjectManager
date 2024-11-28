@@ -1,0 +1,99 @@
+[
+    {
+        "username": "melendez",
+        "password": "53ec18a0217472b20f662b347c74ceeda67dd1b8",
+        "email": "melendez@example.com",
+        "phone": "545-233-4227",
+        "address": "123 Elm Street, Springfield",
+        "projects": [
+            {
+                "project_name": "Mobile App Development",
+                "deadline": "2024-12-15",
+                "status": "Pending",
+                "team_members": [
+                    "David",
+                    "Eve"
+                ]
+            }
+        ]
+    },
+    {
+        "username": "monre",
+        "email": "monre@example.com",
+        "phone": "555-777-8888",
+        "address": "45 Tech Street, Silicon Valley",
+        "password": "5d965f573297385c5f61d88be4d97c32e021c989",
+        "projects": [
+            {
+                "project_name": "AI Research Initiative",
+                "deadline": "2025-03-01",
+                "status": "Ongoing",
+                "team_members": [
+                    "Sophia",
+                    "Mason",
+                    "Liam"
+                ]
+            },
+            {
+                "project_name": "Blockchain Prototype",
+                "deadline": "2024-12-10",
+                "status": "Pending",
+                "team_members": [
+                    "Emma",
+                    "Olivia",
+                    "Noah"
+                ]
+            },
+            {
+                "project_name": "Cybersecurity Audit",
+                "deadline": "2024-11-25",
+                "status": "Completed",
+                "team_members": [
+                    "Ava",
+                    "William",
+                    "James"
+                ]
+            },
+            {
+                "project_name": "Data Center Expansion",
+                "deadline": "2025-01-15",
+                "status": "In Progress",
+                "team_members": [
+                    "Lucas",
+                    "Isabella",
+                    "Michael"
+                ]
+            },
+            {
+                "project_name": "Marketing Automation",
+                "deadline": "2024-11-30",
+                "status": "Ongoing",
+                "team_members": [
+                    "Ethan",
+                    "Charlotte",
+                    "Alexander"
+                ]
+            },
+            {
+                "project_name": "Mobile Game Development",
+                "deadline": "2024-12-05",
+                "status": "In Progress",
+                "team_members": [
+                    "Amelia",
+                    "Harper",
+                    "Benjamin"
+                ]
+            },
+            {
+                "project_name": "IoT Smart Home Solution",
+                "deadline": "2025-02-20",
+                "status": "Pending",
+                "team_members": [
+                    "Jack",
+                    "Mia",
+                    "Elijah"
+                ]
+            }
+        ]
+    }
+]

@@ -1,0 +1,15 @@
+Project: Marketing Automation
+Deadline: 2024-11-30
+Status: Ongoing
+Team Members:
+- Ethan
+- Charlotte
+- Alexander
+
+Summary:
+The Marketing Automation project aims to integrate various marketing tools to streamline campaigns, customer relationship management (CRM), and sales lead generation.
+
+Current Focus:
+- Setting up automated email marketing campaigns
+- Data collection and analysis of customer interactions
+- Integrating social media platforms for broader reach

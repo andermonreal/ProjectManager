@@ -1,91 +1,169 @@
 main {
-    margin: 20px auto;
-    padding: 40px;
-    max-width: 900px;
-    background: linear-gradient(135deg, #ffffff 0%, #f9f9f9 100%);
-    box-shadow: 0 10px 50px rgba(0, 0, 0, 0.1);
-    border-radius: 15px;
+    width: 80%;
+    margin: 30px auto;
 }
 
-h2 {
-    color: #007bff;
-    font-size: 2.5rem;
-    margin-top: 30px;
+#table-container h2,
+#new-project-container h3 {
+    font-size: 2rem;
+    color: #2c3e50;
     margin-bottom: 20px;
-    font-weight: 700;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
 }
 
-table {
+#table-container {
+    margin-bottom: 40px;
+}
+
+#projectsTable {
     width: 100%;
     border-collapse: collapse;
-    margin: 20px 0;
+    margin-top: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
-thead {
-    background-color: #007bff;
-    color: white;
-}
-
-th, td {
+#projectsTable th,
+#projectsTable td {
     padding: 12px;
     text-align: left;
     border-bottom: 1px solid #ddd;
+    font-size: 1rem;
 }
 
-tr:hover {
-    background-color: #f1f1f1;
+#projectsTable th {
+    background-color: #3498db;
+    color: white;
 }
 
-th {
-    font-weight: bold;
+#projectsTable tr:hover {
+    background-color: #ecf0f1;
 }
 
-tbody tr:nth-child(even) {
+#table-container p {
+    font-size: 1.2rem;
+    color: #e74c3c;
+}
+
+#new-project-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 40px;
+}
+
+#addProjectForm label {
+    font-size: 1rem;
+    color: #2c3e50;
+    display: block;
+    margin: 10px 0 5px;
+}
+
+#addProjectForm input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
     background-color: #f9f9f9;
 }
 
-form {
-    margin-top: 30px;
-    padding: 20px;
-    background: #fff;
-    border-radius: 10px;
-    box-shadow: 0 5px 30px rgba(0, 0, 0, 0.1);
-}
-
-label {
-    font-weight: bold;
-    margin-bottom: 5px;
-    display: inline-block;
-}
-
-input[type="text"],
-input[type="date"] {
-    width: calc(100% - 20px);
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    transition: border 0.3s;
-}
-
-input[type="text"]:focus,
-input[type="date"]:focus {
-    border: 1px solid #007bff;
+#addProjectForm input:focus {
     outline: none;
+    border-color: #3498db;
+    background-color: #eaf3fb;
 }
 
-button {
-    padding: 10px 20px;
-    background-color: #007bff;
+#addProjectForm button {
+    background-color: #3498db;
     color: white;
+    padding: 10px 20px;
+    font-size: 1rem;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    font-weight: bold;
-    transition: background 0.3s;
+    transition: background-color 0.3s ease;
 }
 
-button:hover {
-    background-color: #0056b3;
+#addProjectForm button:hover {
+    background-color: #2980b9;
+}
+
+#files-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 40px;
+}
+
+#showFiles {
+    background-color: #3498db;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+#showFiles:hover {
+    background-color: #2980b9;
+}
+
+#files-container h2 {
+    margin-top: 15px;
+    font-size: 1.8rem;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+#files-container ul {
+    list-style: none;
+    padding: 0;
+}
+
+#files-container li {
+    margin: 10px 0;
+}
+
+#files-container a {
+    color: #3498db;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+#files-container a:hover {
+    text-decoration: underline;
+}
+
+#fileContent {
+    margin-top: 30px;
+    border: none;
+    height: 600px;
+    width: 100%;
+    border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+    main {
+        width: 95%;
+    }
+
+    #projectsTable {
+        font-size: 0.9rem;
+    }
+
+    #addProjectForm button,
+    #showFiles {
+        width: 100%;
+    }
+
+    #new-project-container {
+        padding: 15px;
+    }
 }

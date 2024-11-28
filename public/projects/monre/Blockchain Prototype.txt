@@ -1,0 +1,14 @@
+Project: Blockchain Prototype
+Deadline: 2024-12-10
+Status: Pending
+Team Members:
+- Emma
+- Olivia
+- Noah
+
+Summary:
+This project involves creating a prototype for a decentralized blockchain system. The project is focused on developing a secure blockchain architecture and validating its real-world applications.
+
+Upcoming Tasks:
+- Research into blockchain security and consensus mechanisms
+- Prototype design and smart contract development

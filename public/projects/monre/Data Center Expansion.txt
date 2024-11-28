@@ -1,0 +1,15 @@
+Project: Data Center Expansion
+Deadline: 2025-01-15
+Status: In Progress
+Team Members:
+- Lucas
+- Isabella
+- Michael
+
+Summary:
+This project involves expanding the capacity of the company’s data centers to accommodate increasing demand for cloud services. The expansion includes adding new servers, improving network infrastructure, and ensuring environmental sustainability.
+
+Ongoing Tasks:
+- Installation of additional server racks
+- Upgrading cooling systems
+- Testing redundancy protocols

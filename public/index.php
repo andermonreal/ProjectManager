@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,9 +16,20 @@
     <header>
         <h1>Welcome to Project Manager</h1>
         <nav>
-            <a href="index.php">Home</a>
+            <a href="index.php"
+                class="<?php echo basename($_SERVER['PHP_SELF']) == 'index.php' ? 'active' : ''; ?>">Home</a>
             <a href="about_us.php">About Us</a>
-            <a href="login.php">Login</a>
+            <?php
+            if (isset($_SESSION['role'])) {
+                if ($_SESSION['role'] === 'admin') {
+                    echo '<a href="admin.php">Admin Panel</a>';
+                }
+                echo '<a href="dashboard.php">Dashboard</a>';
+                echo '<a href="logout.php">Logout</a>';
+            } else {
+                echo '<a href="login.php">Login</a>';
+            }
+            ?>
         </nav>
     </header>
 
@@ -35,15 +49,18 @@
             <li>Secure user authentication and data encryption.</li>
         </ul>
 
-        <h3>User Testimonials</h3>
-        <blockquote>
-            <p>"Project Manager has transformed the way our team works together!" - John Doe, Project Lead</p>
-        </blockquote>
-        <blockquote>
-            <p>"I can't imagine managing my projects without it!" - Jane Smith, Product Manager</p>
-        </blockquote>
+        <div id="testimonials">
+            <h3>User Testimonials</h3>
+        </div>
 
-        <p><a href="login.php" class="btn">Sign In Now</a> to start managing your projects!</p>
+        <h3>See it in action!</h3>
+        <div class="demo-container">
+            <p>Click the video below to see a quick walkthrough of the platform:</p>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/GLr8NjngjYo" frameborder="0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+
+        </div>
     </main>
 
     <footer>

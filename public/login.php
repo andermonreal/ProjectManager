@@ -1,41 +1,42 @@
 <?php
 session_start();
 
-$adminFile = './admins.json';
-$userFile = './users.json';
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $usernameInput = $_POST['username'] ?? '';
+    $passwordInput = $_POST['password'] ?? '';
 
-$admins = json_decode(file_get_contents($adminFile), true);
-$users = json_decode(file_get_contents($userFile), true);
+    $adminFile = './admins.json';
+    $userFile = './users.json';
 
-function procesarLogin($username, $password, $data)
-{
-    $passwordHash = hash('sha512', $password);
-    foreach ($data as $user) {
-        if ($user['username'] === $username && $user['password'] === $passwordHash) {
-            return true;
+    $admins = json_decode(file_get_contents($adminFile), true);
+    $users = json_decode(file_get_contents($userFile), true);
+
+    function procesarLogin($username, $password, $data)
+    {
+        foreach ($data as $user) {
+            $passwordHash = sha1($password);
+            if ($user['username'] === $username && $passwordHash === $user['password']) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    if (!empty($usernameInput) && !empty($passwordInput)) {
+        if (procesarLogin($usernameInput, $passwordInput, $admins)) {
+            $_SESSION['username'] = $usernameInput;
+            $_SESSION['role'] = 'admin';
+            header('Location: admin.php');
+            exit();
+        } elseif (procesarLogin($usernameInput, $passwordInput, $users)) {
+            $_SESSION['username'] = $usernameInput;
+            $_SESSION['role'] = 'user';
+            header('Location: dashboard.php');
+            exit();
         }
     }
-    return false;
 }
 
-$usernameInput = $_POST['username'] ?? '';
-$passwordInput = $_POST['password'] ?? '';
-
-if (!empty($usernameInput) && !empty($passwordInput)) {
-    if (procesarLogin($usernameInput, $passwordInput, $admins)) {
-        $_SESSION['username'] = $usernameInput;
-        $_SESSION['role'] = 'admin';
-        header('Location: admin.php');
-        exit();
-    } elseif (procesarLogin($usernameInput, $passwordInput, $users)) {
-        $_SESSION['username'] = $usernameInput;
-        $_SESSION['role'] = 'user';
-        header('Location: dashboard.php');
-        exit();
-    } else {
-        echo "Username or passord incorrect";
-    }
-}
 ?>
 
 
@@ -73,8 +74,6 @@ if (!empty($usernameInput) && !empty($passwordInput)) {
             </div>
             <button type="submit" class="btn">Login</button>
         </form>
-
-        <p>Don't have an account? <a href="register.php" class="link">Register here</a></p>
     </main>
 
     <footer>

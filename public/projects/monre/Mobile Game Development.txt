@@ -1,0 +1,15 @@
+Project: Mobile Game Development
+Deadline: 2024-12-05
+Status: In Progress
+Team Members:
+- Amelia
+- Harper
+- Benjamin
+
+Summary:
+This project involves the development of a mobile game targeting casual players. The game will include interactive storylines, character development, and multiplayer options.
+
+Key Tasks:
+- Design levels and game mechanics
+- Implement in-app purchases and reward systems
+- Testing the game's performance on various devices

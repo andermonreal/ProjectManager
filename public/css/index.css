@@ -77,6 +77,41 @@ blockquote:hover {
     transform: scale(1.05);
 }
 
-p, blockquote {
+p,
+blockquote {
     margin-bottom: 20px;
+}
+
+/* Estilo para la sección del video */
+.demo-container {
+    text-align: center;
+    margin: 40px 0;
+    padding: 20px;
+    background-color: #f8f8f8;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.demo-container h3 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 15px;
+    font-family: 'Arial', sans-serif;
+}
+
+.demo-container p {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 20px;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.5;
+}
+
+.demo-container iframe {
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.demo-container iframe:focus {
+    outline: none;
 }

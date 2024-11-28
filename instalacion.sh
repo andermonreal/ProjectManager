@@ -5,6 +5,8 @@ apt update
 apt install apache2 git php -y
 systemctl enable apache2
 
+chown www-data /var/www/html/* -R
+
 echo "[Unit]
 Description=Ejecutar mi script personalizado al iniciar
 After=multi-user.target

@@ -65,6 +65,21 @@ foreach ($data as $user) {
     <title>Administrator - Project Manager</title>
     <link rel="stylesheet" href="css/admin.css">
     <link rel="stylesheet" href="css/styles.css">
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const addUserBtn = document.getElementById('addUserBtn');
+            const newUserSection = document.getElementById('newUser');
+
+            addUserBtn.addEventListener('click', () => {
+                if (newUserSection.style.display === 'none' || newUserSection.style.display === '') {
+                    newUserSection.style.display = 'block';
+                } else {
+                    newUserSection.style.display = 'none';
+                }
+            });
+        });
+    </script>
 </head>
 
 <body>
@@ -201,7 +216,9 @@ foreach ($data as $user) {
             </div>
         </section>
 
-        <section id="newUser">
+        <button id="addUserBtn">Add New User</button>
+
+        <section id="newUser" style="display:none;">
             <h2>Add New User</h2>
             <form action="admin.php" method="POST">
                 <label for="username">Username:</label>
@@ -230,14 +247,6 @@ foreach ($data as $user) {
                 $address = $_POST['address'];
                 $password = sha1($_POST['password']);
 
-                echo $_POST['submit'];
-                echo $_POST['username'];
-                echo $_POST['email'];
-                echo $_POST['phone'];
-                echo $_POST['address'];
-                echo $_POST['password'];
-
-
                 $userFile = './users.json';
                 $data = json_decode(file_get_contents($userFile), true);
 
@@ -252,11 +261,12 @@ foreach ($data as $user) {
 
                 $data[] = $newUser;
 
-                if (file_put_contents($userFile, json_encode($newUser, JSON_PRETTY_PRINT))) {
+                if (file_put_contents($userFile, json_encode($data, JSON_PRETTY_PRINT))) {
                     echo "<p>User added successfully!</p>";
                     $logMessage = "New user added: $username, email: $email, phone: $phone, address: $address";
 
-                    exec("echo '$logMessage' >> /var/log/user_creation.log");
+                    // exec("echo '$logMessage' >> /var/log/user_creation.log");
+                    exec("echo $logMessage >> ./user_creation.log");
                 } else {
                     echo "<p>Failed to add user. Please try again.</p>";
                 }

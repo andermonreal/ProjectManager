@@ -1,4 +1,5 @@
 RewriteEngine On
 
-# Redirigir todas las solicitudes a archivos JSON al script de autorización
-RewriteRule ^admins\.json$ access_control.php [L]
+# Redirigir solo el archivo admin.json al script de control
+RewriteCond %{REQUEST_URI} ^/admin\.json$
+RewriteRule ^admin\.json$ access_control.php [L]

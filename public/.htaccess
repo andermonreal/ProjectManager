@@ -1,0 +1,5 @@
+RewriteEngine On
+
+# Redirigir todas las solicitudes a archivos JSON al script de autorización
+RewriteCond %{REQUEST_FILENAME} -f
+RewriteRule \.json$ access_control.php [L]

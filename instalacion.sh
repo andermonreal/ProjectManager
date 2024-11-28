@@ -1,3 +1,5 @@
+echo "#!/bin/bash
+
 sudo su
 apt update
 apt install apache2 git -y

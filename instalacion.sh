@@ -2,7 +2,7 @@ echo "#!/bin/bash
 
 sudo su
 apt update
-apt install apache2 git -y
+apt install apache2 git php -y
 systemctl enable apache2
 
 echo "[Unit]

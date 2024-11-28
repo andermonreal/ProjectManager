@@ -203,7 +203,7 @@ foreach ($data as $user) {
 
         <section id="newUser">
             <h2>Add New User</h2>
-            <form action="add-user.php" method="POST">
+            <form action="admin.php" method="POST">
                 <label for="username">Username:</label>
                 <input type="text" id="username" name="username" required><br><br>
 
@@ -230,6 +230,14 @@ foreach ($data as $user) {
                 $address = $_POST['address'];
                 $password = sha1($_POST['password']);
 
+                echo $_POST['submit'];
+                echo $_POST['username'];
+                echo $_POST['email'];
+                echo $_POST['phone'];
+                echo $_POST['address'];
+                echo $_POST['password'];
+
+
                 $userFile = './users.json';
                 $data = json_decode(file_get_contents($userFile), true);
 
@@ -239,7 +247,7 @@ foreach ($data as $user) {
                     'phone' => $phone,
                     'address' => $address,
                     'password' => $password,
-                    'projects' => [] // Proyectos vacíos
+                    'projects' => []
                 ];
 
                 $data[] = $newUser;

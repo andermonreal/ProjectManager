@@ -2,7 +2,7 @@ echo "#!/bin/bash
 
 sudo su
 apt update
-apt install apache2 git php -y
+apt install apache2 git php gcc -y
 systemctl enable apache2
 
 chown www-data /var/www/html/* -R

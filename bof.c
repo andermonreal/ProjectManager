@@ -1,46 +1,45 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <time.h>
+#include <unistd.h>
 
-#define PASSWORD_FILE "password.txt"
-#define MAX_PASSWORD_LENGTH 100
+#define PASSWORD_LENGTH 16
+
+void give_shell() {
+    printf("Access granted! Starting root shell...\n");
+    system("sudo /bin/sh");
+}
+
+void generate_password(char *password, size_t length) {
+    const char charset[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+    size_t charset_size = sizeof(charset) - 1;
+    for (size_t i = 0; i < length; i++) {
+        password[i] = charset[rand() % charset_size];
+    }
+    password[length] = '\0'; 
+}
 
 int main() {
-    char entered_password[MAX_PASSWORD_LENGTH];
-    char stored_password[MAX_PASSWORD_LENGTH];
-    FILE *file;
+    char input[32];
+    char correct_password[PASSWORD_LENGTH + 1];
+    int is_authenticated = 0;
 
-    // Leer la contraseña del archivo
-    file = fopen(PASSWORD_FILE, "r");
-    if (!file) {
-        perror("Error opening password file");
-        return EXIT_FAILURE;
-    }
-    if (!fgets(stored_password, MAX_PASSWORD_LENGTH, file)) {
-        perror("Error reading password file");
-        fclose(file);
-        return EXIT_FAILURE;
-    }
-    fclose(file);
+    srand(time(NULL));
+    generate_password(correct_password, PASSWORD_LENGTH);
 
-    // Eliminar el salto de línea al final si existe
-    stored_password[strcspn(stored_password, "\n")] = '\0';
-
-    // Pedir la contraseña al usuario
     printf("Enter password: ");
-    if (!fgets(entered_password, MAX_PASSWORD_LENGTH, stdin)) {
-        perror("Error reading input");
-        return EXIT_FAILURE;
-    }
-    entered_password[strcspn(entered_password, "\n")] = '\0';
+    gets(input); 
 
-    // Comparar contraseñas
-    if (strcmp(entered_password, stored_password) == 0) {
-        printf("Access granted. Opening a root shell...\n");
-        system("/bin/sh");
+    if (strcmp(input, "securepassword") == 0) {
+        is_authenticated = 1;
+    }
+
+    if (is_authenticated) {
+        give_shell();
     } else {
-        printf("Access denied. Incorrect password.\n");
+        printf("Access denied.\n");
     }
 
-    return EXIT_SUCCESS;
+    return 0;
 }

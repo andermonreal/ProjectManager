@@ -8,7 +8,8 @@
 
 void give_shell() {
     printf("Access granted! Starting root shell...\n");
-    system("sudo /bin/sh");
+    setuid(0);
+    execl("/bin/sh", "sh", NULL);
 }
 
 void generate_password(char *password, size_t length) {

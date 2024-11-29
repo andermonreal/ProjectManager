@@ -5,7 +5,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $usernameInput = $_POST['username'] ?? '';
     $passwordInput = $_POST['password'] ?? '';
 
-    $adminFile = './admins.json';
+    $adminFile = './adminsCreds43Fb3r8723FDSbncv43.json';
     $userFile = './users.json';
 
     $admins = json_decode(file_get_contents($adminFile), true);

@@ -1,0 +1,16 @@
+Project: Employee Training Portal
+Deadline: 2024-09-30
+Status: Completed
+Team Members:
+- Oscar
+- Pam
+- Quincy
+
+Summary:
+The Employee Training Portal project was created to facilitate internal training and development within the company. The portal features a variety of training modules, quizzes, and progress tracking tools to help employees advance their skills. It also includes a certification program for employees who complete certain courses. The system has been fully implemented and is now live.
+
+Completed Tasks:
+- Developing and uploading training modules
+- Setting up user authentication and access control
+- Creating a progress tracking and certification system
+- Collecting employee feedback on training effectiveness

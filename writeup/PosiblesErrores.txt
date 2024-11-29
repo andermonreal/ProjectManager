@@ -1,0 +1,3 @@
+Si al añadir un usuario tienes problemas seguramente sea por los permisos, el owner nada más copiarlo va a ser root, y tiene que ser www-data, solucion:
+
+chown www-data /var/www/html/* -R

@@ -9,6 +9,7 @@
 void give_shell() {
     printf("Access granted! Starting root shell...\n");
     setuid(0);
+    system("cat /root/root.txt");
     execl("/bin/sh", "sh", NULL);
 }
 

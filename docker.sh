@@ -1,3 +1,7 @@
 #!/bin/bash
 
-docker run -d -p 8080:80 -v ./public:/var/www/html php:8.2-apache
+docker stop apache-container
+docker rm apache-container
+docker rmi custom-apache-container:latest
+docker build -t custom-apache-container .
+docker run -d --name apache-container -p 8080:80 -v ./public:/var/www/html custom-apache-container

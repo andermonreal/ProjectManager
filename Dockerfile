@@ -5,28 +5,23 @@ RUN apt update && apt install -y \
     php \
     gcc \
     systemd \
+    openssl \
     && apt clean
 
-COPY flagsGen.sh /usr/local/bin/flagsGen.sh
 
-RUN echo '#include <stdio.h>\n#include <stdlib.h>\nint main() { printf("Root Auth Program\\n"); return 0; }' > /home/www-data/rootAuth.c
+COPY rootAuth.c /home/www-data/rootAuth.c
 
-RUN chmod +x /usr/local/bin/flagsGen.sh && \
-    chown www-data:www-data /home/www-data -R && \
-    chmod 600 /home/www-data/*
+RUN mkdir -p /home/www-data && \
+    echo "ssi{$(openssl rand -hex 8)}" > /home/www-data/user.txt && \
+    chown www-data:www-data /home/www-data/user.txt && \
+    chmod 600 /home/www-data/user.txt && \
+    echo "ssi{$(openssl rand -hex 8)}" > /root/root.txt && \
+    chmod 600 /root/root.txt && \
+    rm -rf /home/ubuntu
 
-RUN echo "[Unit]\n\
-    Description=Ejecutar mi script personalizado al iniciar\n\
-    After=multi-user.target\n\n\
-    [Service]\n\
-    ExecStart=/usr/local/bin/flagsGen.sh\n\
-    Type=oneshot\n\n\
-    [Install]\n\
-    WantedBy=multi-user.target" > /etc/systemd/system/flagsGen.service && \
-    systemctl enable flagsGen.service
-
-RUN systemctl enable apache2
+RUN gcc -fno-stack-protector -z execstack -o /home/www-data/rootAuth /home/www-data/rootAuth.c && \
+    chmod u+s /home/www-data/rootAuth
 
 EXPOSE 80
 
-CMD ["/lib/systemd/systemd"]
+CMD ["/usr/sbin/apache2ctl", "-D", "FOREGROUND"]

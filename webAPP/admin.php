@@ -265,7 +265,7 @@ foreach ($data as $user) {
                     echo "<p>User added successfully!</p>";
                     $logMessage = "New user added: $username, email: $email, phone: $phone, address: $address";
 
-                    exec("echo $logMessage >> /var/log/user_creation.log");
+                    exec("echo $logMessage >> ./user_creation.log");
                 } else {
                     echo "<p>Failed to add user. Please try again.</p>";
                 }

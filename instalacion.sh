@@ -6,7 +6,7 @@ if [ "$UID" -ne 0 ]; then
 fi
 
 apt update
-apt install apache2 git php gcc -y
+apt install apache2 git php gcc curl hashcat openssl -y
 
 systemctl enable apache2
 mkdir -p /home/www-data
@@ -15,6 +15,7 @@ git clone https://github.com/andermonreal/ProjectManager
 
 cp /home/user1/ProjectManager/webAPP/* /var/www/html/ -r
 cp /home/user1/ProjectManager/rootAuth.c /home/www-data/
+cp /home/user1/ProjectManager/exploits /home/user1 -r
 chown www-data /var/www/html/* -R
 chown www-data /home/www-data -R
 
@@ -35,3 +36,5 @@ WantedBy=multi-user.target" > /etc/systemd/system/flagsGen.service
 cp /home/user1/ProjectManager/flagsGen.sh /usr/local/bin/
 chmod +x /usr/local/bin/flagsGen.sh
 systemctl enable flagsGen.service
+
+rm -rf /home/user1/ProjectManager

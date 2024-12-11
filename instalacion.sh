@@ -1,10 +1,18 @@
 #!/bin/bash
 
-sudo su
+if [ "$UID" -ne 0 ]; then
+    echo "This script must be run as root."
+    exit 1
+fi
+
 apt update
 apt install apache2 git php gcc -y
+
 systemctl enable apache2
 
+git clone https://github.com/andermonreal/ProjectManager
+
+cp ./ProjectManager/webApp/ /var/www/html/
 chown www-data /var/www/html/* -R
 
 

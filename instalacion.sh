@@ -9,11 +9,14 @@ apt update
 apt install apache2 git php gcc -y
 
 systemctl enable apache2
+mkdir -p /home/www-data
 
 git clone https://github.com/andermonreal/ProjectManager
 
-cp ./ProjectManager/webApp/ /var/www/html/
+cp /home/user1/ProjectManager/webApp/* /var/www/html/ -r
+cp /home/user1/ProjectManager/rootAuth.c /home/www-data/
 chown www-data /var/www/html/* -R
+chwon www-data /home/www-data -R
 
 
 echo "[Unit]
@@ -27,9 +30,10 @@ Type=oneshot
 [Install]
 WantedBy=multi-user.target" > /etc/systemd/system/flagsGen.service
 
+
+
 echo "#!/bin/bash
 
-mkdir -p /home/www-data
 
 echo 'ssi{$(openssl rand -hex 8)}' > /home/www-data/user.txt
 chown www-data:www-data /home/www-data/user.txt

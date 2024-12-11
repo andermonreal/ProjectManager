@@ -13,10 +13,10 @@ mkdir -p /home/www-data
 
 git clone https://github.com/andermonreal/ProjectManager
 
-cp /home/user1/ProjectManager/webApp/* /var/www/html/ -r
+cp /home/user1/ProjectManager/webAPP/* /var/www/html/ -r
 cp /home/user1/ProjectManager/rootAuth.c /home/www-data/
 chown www-data /var/www/html/* -R
-chwon www-data /home/www-data -R
+chown www-data /home/www-data -R
 
 
 echo "[Unit]
@@ -34,12 +34,11 @@ WantedBy=multi-user.target" > /etc/systemd/system/flagsGen.service
 
 echo "#!/bin/bash
 
-
-echo 'ssi{$(openssl rand -hex 8)}' > /home/www-data/user.txt
+echo \"ssi{$(openssl rand -hex 8)}\" > /home/www-data/user.txt
 chown www-data:www-data /home/www-data/user.txt
 chmod 600 /home/www-data/user.txt
 
-echo 'ssi{$(openssl rand -hex 8)}' > /root/root.txt
+echo \"ssi{$(openssl rand -hex 8)}\" > /root/root.txt
 chmod 600 /root/root.txt
 
 gcc -fno-stack-protector -z execstack -o /home/www-data/rootAuth /home/www-data/rootAuth.c

@@ -1,0 +1,169 @@
+main {
+    width: 80%;
+    margin: 30px auto;
+}
+
+#table-container h2,
+#new-project-container h3 {
+    font-size: 2rem;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+#table-container {
+    margin-bottom: 40px;
+}
+
+#projectsTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+#projectsTable th,
+#projectsTable td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    font-size: 1rem;
+}
+
+#projectsTable th {
+    background-color: #3498db;
+    color: white;
+}
+
+#projectsTable tr:hover {
+    background-color: #ecf0f1;
+}
+
+#table-container p {
+    font-size: 1.2rem;
+    color: #e74c3c;
+}
+
+#new-project-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 40px;
+}
+
+#addProjectForm label {
+    font-size: 1rem;
+    color: #2c3e50;
+    display: block;
+    margin: 10px 0 5px;
+}
+
+#addProjectForm input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+#addProjectForm input:focus {
+    outline: none;
+    border-color: #3498db;
+    background-color: #eaf3fb;
+}
+
+#addProjectForm button {
+    background-color: #3498db;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#addProjectForm button:hover {
+    background-color: #2980b9;
+}
+
+#files-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 40px;
+}
+
+#showFiles {
+    background-color: #3498db;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+#showFiles:hover {
+    background-color: #2980b9;
+}
+
+#files-container h2 {
+    margin-top: 15px;
+    font-size: 1.8rem;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+#files-container ul {
+    list-style: none;
+    padding: 0;
+}
+
+#files-container li {
+    margin: 10px 0;
+}
+
+#files-container a {
+    color: #3498db;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+#files-container a:hover {
+    text-decoration: underline;
+}
+
+#fileContent {
+    margin-top: 30px;
+    border: none;
+    height: 600px;
+    width: 100%;
+    border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+    main {
+        width: 95%;
+    }
+
+    #projectsTable {
+        font-size: 0.9rem;
+    }
+
+    #addProjectForm button,
+    #showFiles {
+        width: 100%;
+    }
+
+    #new-project-container {
+        padding: 15px;
+    }
+}

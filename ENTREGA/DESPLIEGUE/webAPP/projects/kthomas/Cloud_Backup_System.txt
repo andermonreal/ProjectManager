@@ -1,0 +1,16 @@
+Project: Cloud Backup System
+Deadline: 2024-10-25
+Status: In Progress
+Team Members:
+- Ian
+- Jack
+- Karen
+
+Summary:
+The Cloud Backup System project aims to provide secure and scalable backup solutions for the company’s critical data. The system will use cloud storage services to automatically back up important files and ensure data redundancy in case of hardware failure. The team is currently working on setting up the initial cloud infrastructure and testing the backup schedules.
+
+Ongoing Tasks:
+- Configuring cloud storage solutions
+- Setting up automated backup schedules
+- Testing data restoration procedures
+- Monitoring cloud storage performance

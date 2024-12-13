@@ -1,0 +1,14 @@
+Project: AI Research Initiative
+Deadline: 2025-03-01
+Status: Ongoing
+Team Members:
+- Sophia
+- Mason
+- Liam
+
+Summary:
+The AI Research Initiative aims to explore new breakthroughs in artificial intelligence, focusing on machine learning models and neural networks. The project is currently in the research phase with progress being tracked regularly.
+
+Current Milestones:
+- Phase 1: Data collection and model training (In Progress)
+- Phase 2: Algorithm testing (Upcoming)

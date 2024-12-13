@@ -1,0 +1,11 @@
+Project: Customer Support Chatbot
+Deadline: 2025-01-10
+Status: Pending
+Team Members:
+- Frank
+- Grace
+- Hannah
+
+Summary:
+This project will create an AI-powered chatbot to enhance the customer support experience on the company’s website. The chatbot will provide instant responses to frequently asked questions, handle basic inquiries, and escalate complex issues to human agents. It will integrate with the existing CRM system to provide personalized support based on customer data.
+

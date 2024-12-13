@@ -1,0 +1,11 @@
+Project: Mobile App UX Design
+Deadline: 2025-02-20
+Status: Pending
+Team Members:
+- Laura
+- Mike
+- Nina
+
+Summary:
+The project focuses on designing the user experience (UX) for a new mobile application that will be launched in the coming months. The app aims to provide users with a seamless and intuitive experience for accessing the company’s services on their mobile devices. The team will conduct user research, develop wireframes, and test various design prototypes to ensure an optimal user interface.
+

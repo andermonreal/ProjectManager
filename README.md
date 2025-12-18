@@ -6,7 +6,7 @@ This is a boot2root challenge based on a Project Manager example.
 
 ### Docker
 
-Just run the **`docker.sh`** and wait till it build up. Then just accest to **`http://127.0.0.1:8080`**.
+Just run the **`start.sh`** and wait till it build up. Then just accest to **`http://127.0.0.1:8080`**.
 
 ### In your machine
 

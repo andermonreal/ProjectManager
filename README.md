@@ -1,14 +1,16 @@
 # ProjectManager
 
-This is a boot2root challenge based on a Project Manager example.
+This is a easy boot2root challenge based on a Project Manager example with a really simple Buffer Overflow. This machine will be hosted on a Docker container so make sure you have the tool installed.
 
-## How to deploy
+## Instalation
 
-### Docker
+```
+git clone https://github.com/andermonreal/ProjectManager.git
+cd ProjectManager/
 
-Just run the **`start.sh`** and wait till it build up. Then just accest to **`http://127.0.0.1:8080`**.
+chmod +x start.sh
+chmod +x stop.sh
 
-### In your machine
-
-Run **`deployment.sh`**. This script will automate the deployment of a docker with a web service.
-Then you will only have to access **`http://127.0.0.1:8080`**.
+./start.sh          # This script will auto deploy de machine.
+./stop.sh           # This scirpt will delete the hole machine
+```

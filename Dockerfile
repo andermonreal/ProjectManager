@@ -3,7 +3,7 @@ FROM ubuntu:latest
 RUN apt update && apt install -y \
     apache2 \
     php \
-    gcc \
+    build-essential \
     systemd \
     openssl \
     && apt clean
@@ -19,7 +19,9 @@ RUN mkdir -p /home/www-data && \
     chmod 600 /root/root.txt && \
     rm -rf /home/ubuntu
 
-RUN gcc -fno-stack-protector -z execstack -o /home/www-data/rootAuth /home/www-data/rootAuth.c && \
+
+RUN gcc -fno-stack-protector -z execstack -std=gnu99 \
+    -o /home/www-data/rootAuth /home/www-data/rootAuth.c && \
     chmod u+s /home/www-data/rootAuth
 
 EXPOSE 80

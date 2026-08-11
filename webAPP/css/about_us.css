@@ -1,80 +1,32 @@
-main {
-    margin: 20px auto;
-    padding: 40px;
-    max-width: 900px;
-    background: linear-gradient(135deg, #ffffff 0%, #f9f9f9 100%);
-    box-shadow: 0 10px 50px rgba(0, 0, 0, 0.1);
-    border-radius: 15px;
-    border: 1px solid #e0e0e0;
-    transition: transform 0.3s;
-}
+/* About page specifics */
 
-main:hover {
-    transform: translateY(-5px);
-}
+.about-hero { text-align: center; padding: 66px 0 20px; }
+.about-hero h1 { font-size: clamp(2rem, 4vw, 3rem); letter-spacing: -.035em; }
+.about-hero p { color: var(--text-2); font-size: 1.12rem; max-width: 62ch; margin: 18px auto 0; }
 
-h2 {
-    color: #007bff;
-    font-size: 2.5rem;
-    margin-top: 30px;
-    margin-bottom: 15px;
-    font-weight: 700;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+.value-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
+.value {
+    display: flex; gap: 16px; padding: 22px; background: var(--surface);
+    border: 1px solid var(--border); border-radius: var(--radius); box-shadow: var(--shadow-sm);
 }
+.value .vico { width: 44px; height: 44px; flex: none; border-radius: 12px; display: grid; place-items: center; background: var(--brand-tint); color: var(--brand-600); }
+.value .vico svg { width: 22px; height: 22px; }
+.value h3 { font-size: 1.02rem; margin-bottom: 5px; }
+.value p { color: var(--text-2); font-size: .93rem; }
 
-p {
-    line-height: 1.8;
-    margin-bottom: 20px;
-    font-size: 1.1rem;
-    color: #333;
-    letter-spacing: 0.5px;
-}
+.team-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
+.member { text-align: center; padding: 26px 18px; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); box-shadow: var(--shadow-sm); transition: transform .18s ease, box-shadow .18s ease; }
+.member:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+.member .avatar { --s: 68px; margin: 0 auto 14px; font-size: 1.5rem; box-shadow: 0 8px 18px -8px rgba(15,23,42,.4); }
+.member .mname { font-weight: 700; }
+.member .mrole { color: var(--brand-600); font-size: .84rem; font-weight: 600; margin-top: 2px; }
+.member .mbio { color: var(--text-2); font-size: .86rem; margin-top: 10px; }
 
-ul {
-    list-style-type: none;
-    padding-left: 0;
-    margin-bottom: 20px;
-}
+.contact-card { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+.contact-card .ci { text-align: center; padding: 26px; }
+.contact-card .ci .cico { width: 48px; height: 48px; margin: 0 auto 12px; border-radius: 12px; display: grid; place-items: center; background: var(--brand-tint); color: var(--brand-600); }
+.contact-card .ci .cico svg { width: 23px; height: 23px; }
+.contact-card .ci .cl { font-size: .78rem; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); font-weight: 700; }
+.contact-card .ci .cv { font-weight: 600; margin-top: 4px; }
 
-ul li {
-    position: relative;
-    padding-left: 20px;
-    margin-bottom: 15px;
-    font-size: 1.1rem;
-    color: #555;
-}
-
-ul li::before {
-    content: "✔️";
-    position: absolute;
-    left: 0;
-    color: #007bff;
-    font-size: 1.3rem;
-}
-
-strong {
-    color: #007bff;
-    font-weight: 700;
-}
-
-a {
-    color: #007bff;
-    text-decoration: none;
-    transition: color 0.3s;
-}
-
-a:hover {
-    color: #0056b3;
-    text-decoration: underline;
-}
-
-blockquote {
-    border-left: 4px solid #007bff;
-    margin: 20px 0;
-    padding-left: 20px;
-    font-style: italic;
-    color: #555;
-    background: #f9f9f9;
-    padding: 15px;
-    border-radius: 5px;
-}
+@media (max-width: 860px) { .team-grid { grid-template-columns: repeat(2,1fr); } .value-grid, .contact-card { grid-template-columns: 1fr; } }

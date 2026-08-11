@@ -1,169 +1,55 @@
-main {
-    width: 80%;
-    margin: 30px auto;
+/* Dashboard — project cards + file browser */
+
+/* Project board */
+.project-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+.project-card {
+    background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius);
+    padding: 20px; box-shadow: var(--shadow-sm);
+    display: flex; flex-direction: column; gap: 14px;
+    transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+}
+.project-card:hover { transform: translateY(-3px); box-shadow: var(--shadow); border-color: var(--border-strong); }
+.project-card .pc-top { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; }
+.project-card .pc-title { font-weight: 700; font-size: 1.02rem; letter-spacing: -.01em; }
+.project-card .pc-key { font-size: .74rem; color: var(--muted); font-weight: 600; letter-spacing: .04em; margin-top: 3px; }
+.project-card .pc-meta { display: flex; align-items: center; gap: 8px; color: var(--text-2); font-size: .84rem; }
+.project-card .pc-meta svg { width: 15px; height: 15px; color: var(--muted); }
+.project-card .pc-foot { display: flex; align-items: center; justify-content: space-between; margin-top: 2px; }
+.project-card .pc-prog-label { display: flex; justify-content: space-between; font-size: .78rem; color: var(--muted); margin-bottom: 6px; font-weight: 600; }
+
+.menu-dots { color: var(--muted); width: 30px; height: 30px; border-radius: 8px; display: grid; place-items: center; }
+.menu-dots:hover { background: var(--surface-2); color: var(--text); }
+
+/* File browser (the "Show files" panel) */
+.filebar { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+.breadcrumb { display: inline-flex; align-items: center; gap: 6px; font-size: .86rem; color: var(--text-2); font-family: var(--mono); background: var(--surface-2); border: 1px solid var(--border); padding: 7px 12px; border-radius: 9px; }
+.breadcrumb svg { width: 15px; height: 15px; color: var(--muted); }
+
+.file-list { list-style: none; margin: 16px 0 0; padding: 0; display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; }
+.file-list li a {
+    display: flex; align-items: center; gap: 11px;
+    padding: 10px 13px; border-radius: 10px; border: 1px solid var(--border);
+    background: var(--surface); color: var(--text-2); font-size: .9rem; font-weight: 500;
+    transition: all .14s ease;
+}
+.file-list li a:hover { border-color: var(--brand-400); background: var(--brand-tint); color: var(--brand-600); }
+.file-list .fi { width: 30px; height: 30px; border-radius: 8px; display: grid; place-items: center; flex: none; background: var(--surface-2); color: var(--muted); }
+.file-list .fi svg { width: 16px; height: 16px; }
+.file-list .fi.php { background: #ede9fe; color: #7c3aed; }
+.file-list .fi.json { background: #fef3c7; color: #d97706; }
+.file-list .fi.txt { background: #dbeafe; color: #2563eb; }
+.file-list .fi.log { background: #e2e8f0; color: #475569; }
+.file-list .fname { font-family: var(--mono); font-size: .84rem; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+.file-empty { text-align: center; padding: 34px; color: var(--muted); }
+.file-empty svg { width: 34px; height: 34px; opacity: .5; margin-bottom: 10px; }
+
+.file-view-wrap { margin-top: 16px; }
+.file-view {
+    margin: 0; padding: 18px; border-radius: var(--radius-sm);
+    background: #0f172a; color: #e2e8f0;
+    font: 13px/1.65 var(--mono); white-space: pre-wrap; word-break: break-word;
+    max-height: 560px; overflow: auto; border: 1px solid #1e293b;
 }
 
-#table-container h2,
-#new-project-container h3 {
-    font-size: 2rem;
-    color: #2c3e50;
-    margin-bottom: 20px;
-}
-
-#table-container {
-    margin-bottom: 40px;
-}
-
-#projectsTable {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-    background-color: #fff;
-    border: 1px solid #ddd;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-}
-
-#projectsTable th,
-#projectsTable td {
-    padding: 12px;
-    text-align: left;
-    border-bottom: 1px solid #ddd;
-    font-size: 1rem;
-}
-
-#projectsTable th {
-    background-color: #3498db;
-    color: white;
-}
-
-#projectsTable tr:hover {
-    background-color: #ecf0f1;
-}
-
-#table-container p {
-    font-size: 1.2rem;
-    color: #e74c3c;
-}
-
-#new-project-container {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    margin-top: 40px;
-}
-
-#addProjectForm label {
-    font-size: 1rem;
-    color: #2c3e50;
-    display: block;
-    margin: 10px 0 5px;
-}
-
-#addProjectForm input {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 20px;
-    font-size: 1rem;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    background-color: #f9f9f9;
-}
-
-#addProjectForm input:focus {
-    outline: none;
-    border-color: #3498db;
-    background-color: #eaf3fb;
-}
-
-#addProjectForm button {
-    background-color: #3498db;
-    color: white;
-    padding: 10px 20px;
-    font-size: 1rem;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-#addProjectForm button:hover {
-    background-color: #2980b9;
-}
-
-#files-container {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    margin-top: 40px;
-}
-
-#showFiles {
-    background-color: #3498db;
-    color: white;
-    padding: 12px 25px;
-    border: none;
-    font-size: 1.1rem;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-top: 20px;
-    transition: background-color 0.3s ease;
-}
-
-#showFiles:hover {
-    background-color: #2980b9;
-}
-
-#files-container h2 {
-    margin-top: 15px;
-    font-size: 1.8rem;
-    color: #2c3e50;
-    margin-bottom: 20px;
-}
-
-#files-container ul {
-    list-style: none;
-    padding: 0;
-}
-
-#files-container li {
-    margin: 10px 0;
-}
-
-#files-container a {
-    color: #3498db;
-    text-decoration: none;
-    font-size: 1.1rem;
-}
-
-#files-container a:hover {
-    text-decoration: underline;
-}
-
-#fileContent {
-    margin-top: 30px;
-    border: none;
-    height: 600px;
-    width: 100%;
-    border-radius: 8px;
-}
-
-@media (max-width: 768px) {
-    main {
-        width: 95%;
-    }
-
-    #projectsTable {
-        font-size: 0.9rem;
-    }
-
-    #addProjectForm button,
-    #showFiles {
-        width: 100%;
-    }
-
-    #new-project-container {
-        padding: 15px;
-    }
-}
+@media (max-width: 900px) { .project-grid { grid-template-columns: 1fr; } .file-list { grid-template-columns: 1fr; } }
